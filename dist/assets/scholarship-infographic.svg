@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#ffffff" />
+  <rect x="40" y="40" width="720" height="220" rx="12" fill="#eaf4ff" />
+  <text x="60" y="90" font-family="Inter, sans-serif" font-size="28" fill="#003366">Scholarship Process</text>
+  <g transform="translate(60,120)">
+    <circle cx="40" cy="40" r="28" fill="#0066ff" />
+    <text x="80" y="48" font-family="Inter, sans-serif" font-size="14" fill="#003366">Apply</text>
+    <circle cx="240" cy="40" r="28" fill="#00a86b" />
+    <text x="280" y="48" font-family="Inter, sans-serif" font-size="14" fill="#003366">Assess</text>
+    <circle cx="440" cy="40" r="28" fill="#ff7a00" />
+    <text x="480" y="48" font-family="Inter, sans-serif" font-size="14" fill="#003366">Select</text>
+    <circle cx="640" cy="40" r="28" fill="#6633cc" />
+    <text x="680" y="48" font-family="Inter, sans-serif" font-size="14" fill="#003366">Enroll</text>
+  </g>
+</svg>

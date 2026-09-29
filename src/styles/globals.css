@@ -1,0 +1,328 @@
+/* ============================================================
+   TechFoundry — Global Design System (Light, Professional)
+   ============================================================ */
+
+/* --- Google Font already loaded via index.html --- */
+
+:root {
+  /* Brand Colors — From TechFoundry Official Logo */
+  --primary: #00b4d8;              /* Vibrant Logo Circuit Cyan */
+  --primary-hover: #0096c7;        /* Deep Cyan */
+  --primary-light: rgba(0, 180, 216, 0.12); /* Soft Cyan Glow Wash */
+  --primary-glow: #00e5ff;         /* High-voltage node glow */
+
+  --accent: #0284c7;               /* Electric Sapphire */
+  --accent-hover: #0369a1;         
+  --accent-light: rgba(2, 132, 199, 0.15);
+  --accent-glow: #38bdf8;
+
+  /* Logo Midnight Navy Backgrounds */
+  --bg: #04091a;                   /* Deepest Logo Midnight Navy */
+  --surface: #07132b;              /* Elevated Card / Section Surface */
+  --surface-2: #0c1e40;            /* Interactive / Hover Surface */
+  --border: #152d59;               /* Subtle Navy Border */
+  --border-strong: #1e3f7a;        /* Glowing Navy Border */
+
+  /* Text on Dark */
+  --text: #ffffff;                 /* Crisp White Heading */
+  --text-secondary: #cbd5e1;       /* Metallic Silver / Slate Body */
+  --muted: #94a3b8;                /* Muted Silver */
+  --muted-light: #64748b;
+
+  /* Feedback */
+  --success: #10b981;
+  --error: #ef4444;
+
+  /* Sizing */
+  --max-width: 1200px;
+  --radius-sm: 6px;
+  --radius: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  /* Shadows with Cyan Ambient Glow */
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.4);
+  --shadow: 0 8px 24px rgba(0,0,0,0.5), 0 0 15px rgba(0,180,216,0.08);
+  --shadow-lg: 0 16px 48px rgba(0,0,0,0.6), 0 0 25px rgba(0,180,216,0.15);
+  --shadow-xl: 0 24px 64px rgba(0,0,0,0.7), 0 0 35px rgba(0,180,216,0.22);
+
+  /* Transitions */
+  --transition: 0.2s ease;
+  --transition-slow: 0.35s ease;
+}
+
+/* ======================== RESET ======================== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: inherit; text-decoration: none; }
+
+ul { list-style: none; }
+
+button { cursor: pointer; font-family: inherit; }
+
+/* ======================== LAYOUT ======================== */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.section-alt {
+  background: var(--surface);
+}
+
+/* ======================== PAGE HERO ======================== */
+.page-hero {
+  background: radial-gradient(ellipse 90% 80% at 50% -20%, #0d2860 0%, #061330 60%, #04091a 100%);
+  padding: 4.5rem 0 3.5rem;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+.page-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 180, 216, 0.45), transparent);
+}
+.page-hero h1 {
+  margin: 0.5rem 0;
+  color: #ffffff;
+}
+.page-hero-sub {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 640px;
+  margin-top: 0.5rem;
+  line-height: 1.6;
+}
+
+/* ======================== TYPOGRAPHY ======================== */
+h1, h2, h3, h4, h5 {
+  line-height: 1.25;
+  color: var(--text);
+  font-weight: 700;
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+h2 { font-size: clamp(1.6rem, 3.5vw, 2.5rem); }
+h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); }
+h4 { font-size: 1.15rem; }
+
+p { color: var(--text-secondary); }
+
+.section-label {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #38bdf8;
+  background: rgba(0, 180, 216, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+}
+
+.section-title {
+  margin-bottom: 0.75rem;
+}
+
+.section-subtitle {
+  color: var(--muted);
+  font-size: 1.05rem;
+  max-width: 600px;
+}
+
+/* ======================== BUTTONS ======================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all var(--transition);
+  border: 2px solid transparent;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #00b4d8 0%, #0077b6 100%);
+  color: #ffffff;
+  border-color: #00b4d8;
+  box-shadow: 0 4px 16px rgba(0, 180, 216, 0.3);
+}
+.btn-primary:hover {
+  background: linear-gradient(135deg, #00d2ff 0%, #0096c7 100%);
+  border-color: #00d2ff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 24px rgba(0, 210, 255, 0.45);
+}
+
+.btn-accent {
+  background: linear-gradient(135deg, #00d2ff 0%, #0284c7 100%);
+  color: #ffffff;
+  border-color: #00d2ff;
+  box-shadow: 0 4px 16px rgba(0, 210, 255, 0.3);
+}
+.btn-accent:hover {
+  background: linear-gradient(135deg, #38bdf8 0%, #0369a1 100%);
+  border-color: #38bdf8;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 24px rgba(0, 210, 255, 0.5);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #38bdf8;
+  border-color: #00b4d8;
+}
+.btn-outline:hover {
+  background: rgba(0, 180, 216, 0.15);
+  color: #00e5ff;
+  border-color: #00e5ff;
+  transform: translateY(-1px);
+}
+
+.btn-ghost {
+  background: rgba(255, 255, 255, 0.05);
+  color: #cbd5e1;
+  border-color: var(--border);
+}
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border-color: var(--border-strong);
+  transform: translateY(-1px);
+}
+
+.btn-lg {
+  padding: 0.85rem 2rem;
+  font-size: 1rem;
+}
+
+/* ======================== CARDS ======================== */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-strong);
+  box-shadow: 0 12px 35px rgba(0, 180, 216, 0.15);
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+/* ======================== GRID ======================== */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+/* ======================== BADGE ======================== */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.badge-blue {
+  background: rgba(0, 180, 216, 0.15);
+  color: #38bdf8;
+  border: 1px solid rgba(0, 180, 216, 0.3);
+}
+
+.badge-green {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+/* ======================== DIVIDER ======================== */
+.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0;
+}
+
+/* ======================== ANIMATIONS ======================== */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.animate-fade-up {
+  animation: fadeInUp 0.6s ease both;
+}
+
+.animate-fade-up-delay-1 { animation-delay: 0.1s; }
+.animate-fade-up-delay-2 { animation-delay: 0.2s; }
+.animate-fade-up-delay-3 { animation-delay: 0.3s; }
+.animate-fade-up-delay-4 { animation-delay: 0.4s; }
+
+/* Scroll-triggered reveal / subtle animations */
+.reveal {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+
+/* ======================== RESPONSIVE ======================== */
+@media (max-width: 1024px) {
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .section { padding: 3.5rem 0; }
+  .grid-3, .grid-2 { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 1rem; }
+  .section { padding: 2.5rem 0; }
+}

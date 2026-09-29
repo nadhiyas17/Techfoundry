@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" rx="12" fill="#fff9f0" />
+  <rect x="40" y="60" width="120" height="80" rx="8" fill="#fff" stroke="#ffe6cc" />
+  <rect x="180" y="60" width="160" height="140" rx="10" fill="#fff" stroke="#ffe6cc" />
+  <text x="200" y="220" font-family="Inter, sans-serif" font-size="18" fill="#ff7a00">Web Development</text>
+</svg>

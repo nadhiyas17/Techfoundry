@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#4f46e5"/>
+      <stop offset="1" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="#f8fafc"/>
+  <g transform="translate(120 100)">
+    <rect x="0" y="0" width="960" height="560" rx="20" fill="url(#g)" opacity="0.12"/>
+    <g transform="translate(60 40)">
+      <rect x="0" y="0" width="560" height="360" rx="14" fill="#fff" stroke="#e6eef8"/>
+      <g transform="translate(28 28)" fill="#0f172a">
+        <rect x="0" y="0" width="220" height="22" rx="6" fill="#eef2ff"/>
+        <rect x="0" y="40" width="520" height="12" rx="6" fill="#f1f5f9"/>
+        <rect x="0" y="64" width="520" height="12" rx="6" fill="#f1f5f9"/>
+        <rect x="0" y="88" width="520" height="12" rx="6" fill="#f1f5f9"/>
+      </g>
+      <g transform="translate(600 40)">
+        <rect x="0" y="0" width="240" height="200" rx="8" fill="#fff" stroke="#e6eef8"/>
+        <g transform="translate(24 24)" fill="#0f172a">
+          <rect x="0" y="0" width="40" height="40" rx="6" fill="#eef2ff"/>
+          <rect x="52" y="0" width="40" height="40" rx="6" fill="#dbeafe"/>
+          <rect x="104" y="0" width="40" height="40" rx="6" fill="#d1fae5"/>
+          <rect x="0" y="52" width="144" height="12" rx="6" fill="#f1f5f9"/>
+          <rect x="0" y="76" width="144" height="12" rx="6" fill="#f1f5f9"/>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(680 460)">
+      <circle cx="0" cy="0" r="48" fill="#fff" stroke="#e6eef8"/>
+      <path d="M-12 -8 h24 v4 h-24 z" fill="#06b6d4"/>
+      <path d="M-12 8 h24 v4 h-24 z" fill="#4f46e5"/>
+    </g>
+    <text x="40" y="460" font-family="Inter, Roboto, Arial" font-size="36" fill="#0f172a">Software Engineering — Systems & Architecture</text>
+  </g>
+</svg>

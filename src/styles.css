@@ -1,0 +1,370 @@
+/* Basic responsive styles */
+:root {
+    --max-width: 1200px;
+    /* brand / image-harmony colors (dark theme variant) */
+    --accent: #3ea7ff;
+    --accent-2: #06b6d4;
+    --text: #eaf6ff;
+    --muted: rgba(234,246,255,0.8);
+    --bg: linear-gradient(180deg,#021027 0%,#041128 60%,#071426 100%);
+    --card-bg: rgba(255,255,255,0.03);
+    --card-border: rgba(255,255,255,0.06);
+    --card-radius: 12px;
+    --shadow: 0 18px 40px rgba(4,10,30,0.6);
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    color: var(--text);
+    background: var(--bg);
+    background-attachment: fixed;
+    background-size: cover;
+    line-height: 1.45
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1rem
+}
+
+.site-header {
+    background: var(--card-bg);
+    border-bottom: 1px solid #e9f0fb;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem
+}
+
+.logo {
+    margin: 0;
+    font-size: 1.25rem;
+    color: var(--accent)
+}
+
+.nav a {
+    margin-left: 1rem;
+    color: var(--muted);
+    text-decoration: none;
+    padding: .35rem .5rem;
+    border-radius: 6px
+}
+
+.nav a:hover {
+    color: var(--text)
+}
+
+.nav .btn-primary {
+    margin-left: 1rem;
+    padding: .5rem .75rem;
+    background: linear-gradient(90deg,var(--accent),var(--accent-2));
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 6px 18px rgba(8,83,255,0.12);
+}
+
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: 0;
+    padding: 8px
+}
+
+.nav-toggle .hamburger {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--muted);
+    position: relative
+}
+
+.nav-toggle .hamburger::after,
+.nav-toggle .hamburger::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--muted)
+}
+
+.nav-toggle .hamburger::before {
+    top: -6px
+}
+
+.nav-toggle .hamburger::after {
+    top: 6px
+}
+
+.nav.open {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: absolute;
+    right: 1rem;
+    top: 64px;
+    background: var(--card-bg);
+    padding: 1rem;
+    border: 1px solid #e9f0fb;
+    border-radius: 8px
+}
+
+.hero {
+    /* starry, deep-blue hero background */
+    background-image:
+        radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.08), transparent),
+        radial-gradient(1px 1px at 60% 30%, rgba(255,255,255,0.06), transparent),
+        radial-gradient(1px 1px at 80% 70%, rgba(255,255,255,0.05), transparent),
+        linear-gradient(180deg, rgba(2,16,39,0.9) 0%, rgba(4,23,44,0.95) 60%, rgba(7,20,38,1) 100%);
+    padding: 3.5rem 0;
+    text-align: center;
+    color: var(--text);
+    /* starry gradient hero (no top image) */
+    background-image:
+        radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.08), transparent),
+        radial-gradient(1px 1px at 60% 30%, rgba(255,255,255,0.06), transparent),
+        radial-gradient(1px 1px at 80% 70%, rgba(255,255,255,0.05), transparent),
+        linear-gradient(180deg, rgba(2,16,39,0.9) 0%, rgba(4,23,44,0.95) 60%, rgba(7,20,38,1) 100%);
+    background-size: auto, auto, auto, cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin: 0 0 .5rem
+}
+
+.hero p {
+    color: var(--muted);
+    margin: 0 0 1.25rem
+}
+
+.hero-actions a {
+    margin: 0 .5rem;
+    text-decoration: none
+}
+
+.btn-primary {
+    background: linear-gradient(90deg,var(--accent),var(--accent-2));
+    color: #fff;
+    padding: .6rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 24px rgba(8,83,255,0.12);
+}
+
+.btn-ghost {
+    border: 1px solid rgba(14,32,66,0.06);
+    padding: .6rem 1rem;
+    border-radius: 8px;
+    color: var(--muted)
+}
+
+/* Card visuals */
+.card {
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    padding: 0; /* image touches top */
+    border-radius: var(--card-radius);
+    border: 1px solid var(--card-border);
+    box-shadow: 0 8px 28px rgba(2,8,20,0.6);
+    overflow: hidden;
+    backdrop-filter: blur(6px);
+}
+
+.card h4 {
+    margin: .75rem 1rem 0.5rem 1rem;
+    font-size: 1.05rem;
+    color: var(--text);
+}
+
+.card img {
+    width: 100%;
+    height: 320px; /* program card image height */
+    object-fit: cover;
+    display: block;
+}
+
+.card .card-body {
+    padding: 1rem;
+}
+
+.programs {
+    padding: 2.25rem 0
+}
+
+.programs .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-top: 1rem;
+    align-items: start
+}
+
+.card-body p{color:var(--muted);margin:.5rem 0 0}
+.btn-card{display:inline-block;padding:.5rem .75rem;border-radius:8px;background:transparent;border:1px solid rgba(8,83,255,0.12);color:var(--accent);text-decoration:none;font-weight:600}
+.card:hover{transform:translateY(-6px);transition:transform .22s ease;box-shadow:0 18px 40px rgba(8,83,255,0.08)}
+.card-body{padding:1rem}
+.program-meta{font-size:.85rem;color:var(--muted);margin-top:6px}
+
+.outcomes .card{display:flex;align-items:center;justify-content:center;min-height:110px}
+.outcomes h4{font-size:1.6rem;margin:0}
+.muted{color:var(--muted)}
+
+/* Program detail */
+.program-detail .back-btn{background:transparent;border:0;color:var(--accent);font-weight:600;margin-bottom:12px;cursor:pointer}
+.program-detail .detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:start}
+.program-detail .detail-media img{width:100%;height:420px;object-fit:cover;border-radius:12px}
+.program-detail .detail-content h2{margin-top:0}
+.program-detail .detail-content ul{margin:0;padding-left:1.1rem}
+
+.program-detail .detail-content ul li{margin:0.5rem 0}
+
+@media (max-width:900px){
+    .program-detail .detail-grid{grid-template-columns:1fr}
+    .program-detail .detail-media img{height:260px}
+}
+
+/* founder cards */
+.founders-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    align-items: start;
+}
+.founders-grid .card { text-align:center; padding:1rem }
+.founders-grid img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto .75rem auto;
+    display:block;
+    box-shadow: 0 8px 24px rgba(8,83,255,0.06);
+}
+
+.founders-grid img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    background: #f8fafc;
+    display: block;
+}
+
+.scholarship-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 1rem
+}
+
+/* Hero banner styling removed - hero image was removed from markup */
+
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 2rem;
+    align-items: start
+}
+
+.apply-form {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem
+}
+
+.apply-form label {
+    display: flex;
+    flex-direction: column;
+    font-size: .9rem;
+    color: var(--muted)
+}
+
+.apply-form input {
+    padding: .5rem;
+    border: 1px solid #ddd;
+    border-radius: 6px
+}
+
+.apply-form .success {
+    color: green;
+    font-weight: 600;
+    margin-top: .5rem
+}
+
+.scholarship,
+.contact {
+    padding: 2rem 0;
+    background: var(--card-bg);
+}
+
+.site-footer {
+    padding: 1rem 0;
+    border-top: 1px solid #eee;
+    text-align: center;
+    color: var(--muted)
+}
+
+/* Responsive */
+@media (max-width:900px) {
+    .programs .grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .header-inner {
+        padding: .75rem
+    }
+
+    .hero h2 {
+        font-size: 1.6rem
+    }
+}
+
+@media (max-width:600px) {
+    .programs .grid {
+        grid-template-columns: 1fr
+    }
+
+    .nav {
+        display: none
+    }
+
+    .nav-toggle {
+        display: inline-block
+    }
+
+    .nav.open {
+        right: 0;
+        left: 0;
+        top: 56px;
+        margin: 0 1rem
+    }
+
+    .header-inner {
+        padding: .5rem
+    }
+
+    .hero {
+        padding: 2rem 0
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr
+    }
+
+    .card img {
+        height: 220px;
+    }
+    .founders-grid { grid-template-columns: repeat(2,1fr) }
+}

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" rx="12" fill="#f7fff6" />
+  <rect x="60" y="60" width="280" height="28" rx="6" fill="#e6ffe8" />
+  <rect x="60" y="110" width="280" height="28" rx="6" fill="#e6ffe8" />
+  <text x="200" y="220" font-family="Inter, sans-serif" font-size="18" fill="#00a86b">Software Engineering</text>
+</svg>

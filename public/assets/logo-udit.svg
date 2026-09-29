@@ -1,0 +1,44 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 110" fill="none">
+  <defs>
+    <linearGradient id="udit-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f5d4" />
+      <stop offset="50%" stop-color="#00b4d8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="udit-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f5d4" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.3" />
+    </linearGradient>
+    <filter id="udit-filter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Logo Emblem: High-Tech Cyber 'U' with Infinity Nodes -->
+  <g transform="translate(15, 10)">
+    <rect x="0" y="0" width="88" height="88" rx="20" fill="#061c2e" stroke="#134e6f" stroke-width="2" />
+    
+    <!-- Outer accent arc -->
+    <path d="M22 26 V52 C22 66 32 74 44 74 C56 74 66 66 66 52 V26" stroke="#0f3852" stroke-width="4" stroke-linecap="round" fill="none" />
+    
+    <!-- Main Glowing U Path -->
+    <path d="M28 26 V52 C28 62 35 68 44 68 C53 68 60 62 60 52 V26" stroke="url(#udit-grad)" stroke-width="6" stroke-linecap="round" fill="none" filter="url(#udit-filter)" />
+    
+    <!-- Pulse Nodes -->
+    <circle cx="28" cy="26" r="4" fill="#00f5d4" />
+    <circle cx="60" cy="26" r="4" fill="#00b4d8" />
+    <circle cx="44" cy="46" r="5" fill="#ffffff" />
+    
+    <!-- Horizontal Cross Connectors -->
+    <line x1="28" y1="46" x2="39" y2="46" stroke="#00f5d4" stroke-width="2.5" stroke-linecap="round" />
+    <line x1="49" y1="46" x2="60" y2="46" stroke="#00b4d8" stroke-width="2.5" stroke-linecap="round" />
+  </g>
+
+  <!-- Typography -->
+  <g transform="translate(120, 24)">
+    <text x="0" y="34" font-family="'Inter', 'Segoe UI', system-ui, sans-serif" font-size="28" font-weight="800" fill="#ffffff" letter-spacing="0.5">UDIT</text>
+    <text x="0" y="56" font-family="'Inter', 'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="700" fill="#00f5d4" letter-spacing="2.5">TECHNOLOGIES PVT. LTD.</text>
+    <line x1="0" y1="65" x2="250" y2="65" stroke="url(#udit-glow)" stroke-width="1.5" stroke-linecap="round" />
+  </g>
+</svg>
